@@ -25,10 +25,11 @@ function seleccionRotor(x) {
     return select
 }
 
-function inicioRotor() {
+function inicioRotor(x) {
 
     const caracteres = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "_"];
     const select = document.createElement("select");
+    select.setAttribute('id', 'rPos' + x)
 
     for (let i = 0; i < caracteres.length; i++) {
         const option = document.createElement("option");
@@ -44,9 +45,9 @@ const selectr1 = seleccionRotor(1)
 const selectr2 = seleccionRotor(2)
 const selectr3 = seleccionRotor(3)
 
-const select1 = inicioRotor()
-const select2 = inicioRotor()
-const select3 = inicioRotor()
+const select1 = inicioRotor(1)
+const select2 = inicioRotor(2)
+const select3 = inicioRotor(3)
 
 document.getElementById('R1').appendChild(selectr1);
 document.getElementById('R2').appendChild(selectr2);
@@ -58,7 +59,6 @@ document.getElementById('R3').appendChild(select3);
 
 
 
-
 const r1 = document.getElementById('rotor1').value;
 const r2 = document.getElementById('rotor2').value;
 const r3 = document.getElementById('rotor3').value;
@@ -67,6 +67,6 @@ const d1 = new Datos(mix[r1]);
 const d2 = new Datos(mix[r2]);
 const d3 = new Datos(mix[r3]);
 
-export const R1 = new Rotor(d1);
-export const R2 = new Rotor(d2);
-export const R3 = new Rotor(d3);
+export let R1 = new Rotor(d1);
+export let R2 = new Rotor(d2);
+export let R3 = new Rotor(d3);
