@@ -40,6 +40,7 @@ function inicioRotor(x) {
 
     return select;
 }
+teclado()
 
 const selectr1 = seleccionRotor(1)
 const selectr2 = seleccionRotor(2)
@@ -70,3 +71,72 @@ const d3 = new Datos(mix[r3]);
 export let R1 = new Rotor(d1);
 export let R2 = new Rotor(d2);
 export let R3 = new Rotor(d3);
+
+
+
+function teclado() {
+    radio()
+
+    const teclasContainer = document.getElementById('teclas');
+    const filas = [
+        ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+        ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+        ["A", "S", "D", "F", "G", "H", "J", "K", "L", "Ñ"],
+        ["Z", "X", "C", "V", "B", "N", "M", " "], 
+    ];
+        
+    filas.forEach(fila => {
+        const filaDiv = document.createElement('div');
+        filaDiv.className = 'fila';
+
+        fila.forEach(tecla => {
+            const teclaDiv = document.createElement('div');
+            teclaDiv.className = 'tecla';
+            teclaDiv.setAttribute('id', 'key' + tecla);
+            teclaDiv.setAttribute('data-key', tecla);
+            teclaDiv.textContent = tecla === " " ? "" : tecla; 
+            if (tecla === " ") {
+                teclaDiv.classList.add('espacio', 'tecla');
+            }
+            filaDiv.appendChild(teclaDiv);
+        });
+
+        teclasContainer.appendChild(filaDiv);
+    });
+}
+
+function radio() {
+   const radioContainer = document.getElementById('radioBut');
+
+    const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'cyan', 'lime', 'brown'];
+
+    for (let i = 0; i < 10; i++) {
+        const radioWrapper = document.createElement('div'); 
+        const radioInput = document.createElement('input');
+        const colorDiv = document.createElement('div');
+
+        radioInput.type = 'radio';
+        radioInput.id = `radio${i}`;
+        radioInput.name = 'group1';
+        radioInput.value = i;
+
+        colorDiv.style.width = '20px';
+        colorDiv.style.height = '20px';
+        colorDiv.style.backgroundColor = colors[i];
+        colorDiv.style.display = 'inline-block';
+        colorDiv.style.marginLeft = '10px';
+        colorDiv.style.border = '1px solid black';
+
+        radioWrapper.style.display = 'flex';
+        radioWrapper.style.alignItems = 'center';
+        radioWrapper.style.marginBottom = '10px';
+        radioWrapper.appendChild(radioInput);
+        radioWrapper.appendChild(colorDiv);
+
+        radioContainer.appendChild(radioWrapper);
+
+        radioInput.addEventListener('click', () => {
+            console.log(`Valor seleccionado: ${radioInput.value}`);
+        });
+    }
+}

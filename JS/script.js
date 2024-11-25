@@ -2,9 +2,6 @@ import {R1, R2, R3} from './config.js';
 
 const enviar = document.getElementById('enviar');
 
-var ar = ["F", "V", "O", "8", "3", "S", "0", "K", "H", "2", "Q", "E", "L", "5", "M", "G", "1", "A", "D", "7", "J", "X", "Y", "C", "R", "9", " ", "P", "W", "Z", "T", "B", "6", "I", "N", "4", "Ñ", "U"]
-
-
 enviar.addEventListener('click', iniciar);
 
 function iniciar (){

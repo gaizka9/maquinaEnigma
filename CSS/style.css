@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#maquina {
+    width: 50%;
+    background-color: #f0f0f0; 
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 30vh;
+}
+
+#campo {
+    width: 50%;
+    background-color: #ffffff; 
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+#receptor {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 50px;
+    background-color: #fafafa;
+}
+
+#rotor {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 5%;
+}
+
+#rotor div {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#teclas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    margin-top: 20px; 
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.tecla {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 40px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.espacio {
+    width: 200px; 
+}
+
+#radioBut {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin: 10px;
+    gap: 1%;
+}
