@@ -92,51 +92,51 @@ textarea {
 
 /* Estilos para cada color de iluminación usando el atributo `data-color` */
 .tecla[data-color="1"] {
-    background-color: #ffcc00; /* Amarillo brillante */
-    box-shadow: 0 0 10px 5px rgba(255, 204, 0, 0.8);
+    background-color: #d4a373; /* Marrón suave */
+    box-shadow: 0 0 5px 3px rgba(212, 163, 115, 0.4);
 }
 
 .tecla[data-color="2"] {
-    background-color: #ff3300; /* Rojo brillante */
-    box-shadow: 0 0 10px 5px rgba(255, 51, 0, 0.8);
+    background-color: #8e9aaf; /* Gris azulado */
+    box-shadow: 0 0 5px 3px rgba(142, 154, 175, 0.4);
 }
 
 .tecla[data-color="3"] {
-    background-color: #33cc33; /* Verde brillante */
-    box-shadow: 0 0 10px 5px rgba(51, 204, 51, 0.8);
+    background-color: #b7b7a4; /* Verde oliva apagado */
+    box-shadow: 0 0 5px 3px rgba(183, 183, 164, 0.4);
 }
 
 .tecla[data-color="4"] {
-    background-color: #0066ff; /* Azul brillante */
-    box-shadow: 0 0 10px 5px rgba(0, 102, 255, 0.8);
+    background-color: #6b705c; /* Verde militar */
+    box-shadow: 0 0 5px 3px rgba(107, 112, 92, 0.4);
 }
 
 .tecla[data-color="5"] {
-    background-color: #ff66cc; /* Rosa brillante */
-    box-shadow: 0 0 10px 5px rgba(255, 102, 204, 0.8);
+    background-color: #cb997e; /* Terracota suave */
+    box-shadow: 0 0 5px 3px rgba(203, 153, 126, 0.4);
 }
 
 .tecla[data-color="6"] {
-    background-color: #ff33cc; /* Fucsia brillante */
-    box-shadow: 0 0 10px 5px rgba(255, 51, 204, 0.8);
+    background-color: #a5a58d; /* Beige grisáceo */
+    box-shadow: 0 0 5px 3px rgba(165, 165, 141, 0.4);
 }
 
 .tecla[data-color="7"] {
-    background-color: #66ff66; /* Verde neón */
-    box-shadow: 0 0 10px 5px rgba(102, 255, 102, 0.8);
+    background-color: #6a8caf; /* Azul pizarra */
+    box-shadow: 0 0 5px 3px rgba(106, 140, 175, 0.4);
 }
 
 .tecla[data-color="8"] {
-    background-color: #00ffcc; /* Cian brillante */
-    box-shadow: 0 0 10px 5px rgba(0, 255, 204, 0.8);
+    background-color: #adc178; /* Verde bosque */
+    box-shadow: 0 0 5px 3px rgba(173, 193, 120, 0.4);
 }
 
 .tecla[data-color="9"] {
-    background-color: #ff99cc; /* Rosa claro brillante */
-    box-shadow: 0 0 10px 5px rgba(255, 153, 204, 0.8);
+    background-color: #b5838d; /* Malva apagado */
+    box-shadow: 0 0 5px 3px rgba(181, 131, 141, 0.4);
 }
 
 .tecla[data-color="10"] {
-    background-color: #cc00ff; /* Violeta brillante */
-    box-shadow: 0 0 10px 5px rgba(204, 0, 255, 0.8);
+    background-color: #5f7a61; /* Verde esmeralda oscuro */
+    box-shadow: 0 0 5px 3px rgba(95, 122, 97, 0.4);
 }

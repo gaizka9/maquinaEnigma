@@ -103,5 +103,17 @@ function teclado() {
 
         teclasContainer.appendChild(filaDiv);
     });
+
+    const par1  = ["Q", "9", "D", "B", "T", "2", "S", "P", "O", "Z"];
+    const par2  = ["2", "X", "5", "F", "G", "N", "J", "K", "R", "Ñ"];
+
+    insertCruce(par1);
+    insertCruce(par2);
 }
 
+function insertCruce(par) {
+    for (let i = 0; i < par.length; i++) {
+        const e = document.getElementById('key' + par[i])
+        e.setAttribute('data-color', i+1);
+    }
+}
