@@ -12,6 +12,8 @@ function iniciar (){
 
     let emisor = document.getElementById('emisor').value
     emisor = emisor.toUpperCase();
+    emisor = sustituir(emisor)
+    console.log(emisor)
     let receptor = document.getElementById('receptor');
 
     R1.rotar(rPos1);
@@ -19,6 +21,7 @@ function iniciar (){
     R3.rotar(rPos3);
 
     var mensaje = cifrar(emisor);
+    mensaje = sustituir(mensaje)
     receptor.innerText = mensaje;
 
 }
@@ -59,4 +62,50 @@ function cifrar (mensaje) {
     }
 
     return salida
+}
+
+function sustituir(emisor) {
+    const resultado = new Array(20).fill(null);
+    const elementos = document.querySelectorAll('[data-color]');
+
+    elementos.forEach(elemento => {
+        const dataColor = elemento.getAttribute('data-color');
+        const dataKey = elemento.getAttribute('data-key');
+
+        if (dataColor) {
+            const numero = Number(dataColor);
+            if (numero >= 1 && numero <= 10) {
+                const posPri = numero - 1; 
+                const posSec = posPri + 10;
+                
+                if (resultado[posPri] === null) {
+                    resultado[posPri] = dataKey;
+                } else {
+                    resultado[posSec] = dataKey;
+                }
+            }
+        }
+    });
+
+    var mensaje = ''
+    for (let i = 0; i < emisor.length; i++) {
+        mensaje += sustit(resultado, emisor[i], 0);
+    }
+
+    return mensaje;
+}
+
+function sustit(array, a, x){
+
+    if (x == 20) {
+        return a
+    } else if (a == array[x]){
+        if (x < 10) {
+            return array[x + 10]
+        }else {
+            return array[x - 10]
+        }
+    }else {
+        return sustit(array, a, x+1)
+    }
 }

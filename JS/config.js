@@ -118,7 +118,7 @@ function teclado() {
     });
 
     const par1  = ["Q", "9", "D", "B", "T", "2", "S", "P", "O", "Z"];
-    const par2  = ["2", "X", "5", "F", "G", "N", "J", "K", "R", "Ñ"];
+    const par2  = ["6", "X", "5", "F", "G", "N", "J", "K", "R", "Ñ"];
 
     insertCruce(par1);
     insertCruce(par2);
