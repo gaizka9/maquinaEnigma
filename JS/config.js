@@ -42,6 +42,19 @@ function inicioRotor(x) {
 }
 teclado()
 
+var intercambio = new Set();
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('tecla')) {
+        const id = event.target.id; 
+        intercambio.add(id)
+    }
+
+    if (intercambio.size === 2) {
+            intercambiar(intercambio);
+            intercambio.clear();
+        }
+});
+
 const selectr1 = seleccionRotor(1)
 const selectr2 = seleccionRotor(2)
 const selectr3 = seleccionRotor(3)
@@ -116,4 +129,16 @@ function insertCruce(par) {
         const e = document.getElementById('key' + par[i])
         e.setAttribute('data-color', i+1);
     }
+}
+
+
+function intercambiar(intercambio){
+    const [id1, id2] = Array.from(intercambio);
+
+    const a = document.getElementById(id1)
+    const b = document.getElementById(id2)
+
+    const aux = a.getAttribute('data-color');
+    a.setAttribute('data-color', b.getAttribute('data-color'));
+    b.setAttribute('data-color', aux);
 }
