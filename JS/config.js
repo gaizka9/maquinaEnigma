@@ -8,8 +8,6 @@ const mix3 = ["B", "K", "T", "5", "W", "Z", "H", "9", "U", "F", "0", "S", "2", "
 const mix4 = ["J", "4", "M", "I", "0", "Q", "X", "V", "7", "T", "5", "R", "K", " ", "G", "L", "9", "W", "Ñ", "1", "C", "O", "U", "S", "F", "H", "Y", "E", "B", "3", "P", "A", "N", "D", "Z", "2", "6", "8"];
 const mix = [mix0, mix1, mix2, mix3, mix4];
 
-const maquina = document.getElementById('maquina');
-
 function seleccionRotor(x) {
 
     const select = document.createElement("select");

@@ -23,7 +23,6 @@ function iniciar (){
     var mensaje = cifrar(emisor);
     mensaje = sustituir(mensaje)
     receptor.innerText = mensaje;
-
 }
 
 function cifrar (mensaje) {
@@ -66,7 +65,7 @@ function cifrar (mensaje) {
 
 function sustituir(emisor) {
     const resultado = new Array(20).fill(null);
-    const elementos = document.querySelectorAll('[data-color]');
+    const elementos = document.querySelectorAll('.tecla');
 
     elementos.forEach(elemento => {
         const dataColor = elemento.getAttribute('data-color');
@@ -74,15 +73,11 @@ function sustituir(emisor) {
 
         if (dataColor) {
             const numero = Number(dataColor);
-            if (numero >= 1 && numero <= 10) {
-                const posPri = numero - 1; 
-                const posSec = posPri + 10;
                 
-                if (resultado[posPri] === null) {
-                    resultado[posPri] = dataKey;
-                } else {
-                    resultado[posSec] = dataKey;
-                }
+            if (resultado[numero - 1] === null) {
+                resultado[numero - 1] = dataKey;
+            } else {
+                resultado[(numero - 1) + 10] = dataKey;
             }
         }
     });
