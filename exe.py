@@ -18,14 +18,18 @@ def intercambio(a, b):
     boton.click()
 
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-driver.get("http://127.0.0.1:5500/index.html")
-driver.refresh()
+texto = input("Insertar texto:\n")
 
 claves = 'claves.csv'
 df = pd.read_csv(claves, sep=';', encoding='latin1')
 
 index =  int(input(f"Elige una clave del 1 al {df.shape[0]}: ")) -1 # El número de filas es el primer valor de la tupla
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver.get("http://127.0.0.1:5500/index.html")
+driver.refresh()
+
+
 fila = df.iloc[index]
 
 rotor = fila['rotor'].split('-')
@@ -62,7 +66,6 @@ intercambio("B", teclas[18])
 intercambio("N", teclas[19])
 
 emisor = driver.find_element(By.ID, "emisor")
-texto = input("Insertar texto:\n")
 emisor.clear()  # Limpiar cualquier texto existente
 emisor.send_keys(texto)
 
